@@ -3801,9 +3801,8 @@ body {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.5;
-    padding-bottom: 35px;
     color: #41484d;
-    background-color: #fff;
+    background-color: #000;
     margin: 0
 }
 
@@ -4678,10 +4677,6 @@ table {
 
 .charset-ref tr td .btn {
     float: right
-}
-
-.table-striped tr {
-    background-color: #000000
 }
 
 .css-selectors {
