@@ -1,5 +1,8 @@
 body {
     color: rgb(2, 88, 2);
-    background-color: black
-  
+    background-color: black;
+    margin-top: 100px;
+    border:solid;
+    border-color:maroon
+
 }
