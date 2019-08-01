@@ -13,3 +13,8 @@ body {
     font-size: 43px;
     font-style: italic;
 }
+
+.link {
+    /* styles for links go here */
+    color: rebeccapurple;
+}
