@@ -5,6 +5,11 @@ body {
     margin-top: 100px;
     margin-bottom: 100px;
     border:solid;
-    border-color:maroon
-    
+    border-color:maroon;
+}
+
+#title {
+    border:solid maroon;
+    font-size: 43px;
+    font-style: italic;
 }
