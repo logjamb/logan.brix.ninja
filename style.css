@@ -1,20 +1,29 @@
 body {
     color: rgb(2, 88, 2);
-    background-color: black;
-    margin-top: 100px;
-    margin-top: 100px;
+    background-color:#000;
+}
+
+#body {
     margin-bottom: 100px;
     border:solid;
     border-color:maroon;
+    height: calc(100vh - 200px - 6px);
 }
 
 #title {
     border:solid maroon;
-    font-size: 43px;
-    font-style: italic;
+    font-size: 22px;
+    
 }
 
 .link {
     /* styles for links go here */
     color: rebeccapurple;
 }
+
+.text {
+    background-color: maroon;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 2px 4px;
+}#mark{font-size: 22px}
