@@ -13,6 +13,7 @@ body {
 #title {
     border:solid maroon;
     font-size: 26px;
+    font-style: italic;
     
 }
 
@@ -26,4 +27,10 @@ body {
     border-radius: 5px;
     display: inline-block;
     padding: 2px 4px;
-}#mark{font-size: 22px}
+}
+
+#mark {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 100px;
+}
