@@ -4,7 +4,7 @@ body {
 }
 
 #body {
-    margin-bottom: 100px;
+    
     border:solid;
     border-color:maroon;
     height: calc(100vh - 200px - 6px);
