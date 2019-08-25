@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
 body {
-    color: rgb(2, 88, 2);
-    background-color:#000;
+    animation:colorchange 20s infinite alternate;
+    background-color: #000;
 }
 
 #body {
-    
-    border:solid;
-    border-color:maroon;
+
+    border: solid;
+    border-color: maroon;
     height: calc(100vh - 200px - 6px);
 }
 
 #title {
-    border:solid maroon;
-    font-size: 26px;
+    border: solid maroon;
     font-style: italic;
-    
+
 }
 
 .link {
@@ -27,7 +26,7 @@ body {
 
 .text {
     background-color: maroon;
-    border-radius: 5px;
+    border-radius: 50px;
     display: inline-block;
     padding: 2px 4px;
 }
@@ -39,25 +38,121 @@ body {
 }
 
 #review {
-    width:100%;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin:8px 0;
-    outline:none;
-    padding:8px;
-    box-sizing:border-box;
-    transition:.3s;
-    height:100px;
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    height: 100px;
     font-family: Lobster, monospace;
 }
-  
-#review:focus{
-    border-color:dodgerBlue;
-    box-shadow:0 0 8px 0 dodgerBlue;
+
+#review:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
 }
+
 #rate {
-font-size:  20px;
+    font-size: 20px;
 }
-#acii{
-    font-size:6px
+
+#outer-rev {
+    width: 100%;
 }
+
+#card {
+    position: relative;
+    animation: flip ease-in-out 3s infinite alternate;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    transform-style: preserve-3d;
+    
+}
+
+#front,
+#back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    border: solid;
+    background-color: maroon;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    backface-visibility: hidden;
+  
+}
+
+#back {
+    transform: rotateY(180deg);
+}
+
+@keyframes flip {
+    20% { transform: rotateY(0) }
+    30% { transform: rotateY(180deg) }
+    70% { transform: rotateY(180deg) }
+    80% { transform: rotateY(0) }
+}
+@-webkit-keyframes colorchange {
+    0% {
+      
+      color: blue;
+    }
+    
+    10% {
+      
+      color: #8e44ad;
+    }
+    
+    20% {
+      
+      color: #1abc9c;
+    }
+    
+    30% {
+      
+      color: #d35400;
+    }
+    
+    40% {
+      
+      color: blue;
+    }
+    
+    50% {
+      
+      color: #34495e;
+    }
+    
+    60% {
+      
+      color: blue;
+    }
+    
+    70% {
+      
+      color: #2980b9;
+    }
+    80% {
+   
+      color: #f1c40f;
+    }
+    
+    90% {
+   
+      color: #2980b9;
+    }
+    
+    100% {
+      
+      color: pink;
+    }
+  }
