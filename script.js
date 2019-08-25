@@ -3,6 +3,9 @@ const submitButton = document.querySelector("#submit");
 submitButton.addEventListener("click", () => {
 	alert("Thanks for the report");
 	review.value = "";
+	stars.forEach((s) => {
+		s.checked = false;
+	});
 });
 
 const stars = Array.from(document.querySelectorAll(".star"));
