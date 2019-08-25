@@ -20,7 +20,7 @@ body {
 
 .link {
     /* styles for links go here */
-    color: rebeccapurple;
+    color: inherit;
     font-size: 22px;
 }
 
@@ -101,7 +101,7 @@ body {
     70% { transform: rotateY(180deg) }
     80% { transform: rotateY(0) }
 }
-@-webkit-keyframes colorchange {
+@keyframes colorchange {
     0% {
       
       color: blue;
