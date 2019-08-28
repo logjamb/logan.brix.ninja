@@ -16,3 +16,10 @@ stars.forEach((star, i) => {
 		});
 	});
 });
+
+review.addEventListener("keypress", (event) => {
+	if (event.code === "Enter") {
+		event.preventDefault();
+		submitButton.click();
+	}
+})
