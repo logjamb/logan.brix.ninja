@@ -61,8 +61,10 @@ body {
     background: black;
     border: 3px solid seagreen;
     border-radius: 50px;
+    height:500px;
+    width:500px;
+    font-size:40px
 }
-
 #dialog #winLose {
     margin: 0;
 }.althome {
