@@ -15,22 +15,35 @@ const $scissors = document.querySelector("#scissors");
 const $dialog = document.querySelector("#dialog");
 const $computerPick = document.querySelector("#computerPick");
 const $winLose = document.querySelector("#winLose");
+const $restart = document.querySelector("#restart");
 
 $rock.addEventListener("click", () => {
 	pickHand("rock");
-}, {passive: true});
+}, {
+	passive: true
+});
 
 $paper.addEventListener("click", () => {
 	pickHand("paper");
-}, {passive: true});
+}, {
+	passive: true
+});
 
 $scissors.addEventListener("click", () => {
 	pickHand("scissors");
-}, {passive: true});
+}, {
+	passive: true
+});
 
 $dialog.addEventListener("click", () => {
 	$dialog.classList.add("hide");
-}, {passive: true});
+}, {
+	passive: true
+});
+
+$restart.addEventListener('click', restartGame, {
+	passive: true
+});
 
 function pickHand(hand) {
 	state.youPick = hand;
@@ -90,7 +103,7 @@ function showDialog() {
 	} else if (state.win) {
 		$winLose.textContent = "You Win";
 	} else {
-		$winLose.textContent = "You Lose";
+		$winLose.textContent = "Computer Wins";
 	}
 	$dialog.classList.remove("hide");
 }
@@ -99,11 +112,21 @@ function updateScores() {
 	$youScore.textContent = state.youScore;
 	$computerScore.textContent = state.computerScore;
 
-	if (state.youScore === state.computerScore) {
+	if (state.youScore === 0 && state.computerScore === 0) {
+		$pickSelection.textContent = "Pick your selection";
+	} else if (state.youScore === state.computerScore) {
 		$pickSelection.textContent = "You are tied at " + state.youScore;
 	} else if (state.youScore > state.computerScore) {
 		$pickSelection.textContent = "You are winning by " + (state.youScore - state.computerScore);
 	} else {
-		$pickSelection.textContent = "You are losing by " + (state.computerScore - state.youScore);
+		$pickSelection.textContent = "Computer is winning by " + (state.computerScore - state.youScore);
 	}
+
+	$restart.classList.toggle("hide", (state.youScore === 0 && state.computerScore === 0));
+}
+
+function restartGame() {
+	state.youScore = 0;
+	state.computerScore = 0;
+	updateScores();
 }

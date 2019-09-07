@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
 
 body {
   animation: colorchange 20s infinite alternate;
@@ -46,7 +46,7 @@ body {
   box-sizing: border-box;
   transition: .3s;
   height: 100px;
-  font-family: Lobster, monospace;
+  font-family: sans-serif
 }
 
 #review:focus {
@@ -97,6 +97,9 @@ body {
 
 #back {
   transform: rotateY(180deg);
+}
+.star{
+  cursor: pointer;
 }
 
 @keyframes flip {

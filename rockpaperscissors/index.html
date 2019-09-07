@@ -9,15 +9,17 @@
   <body>
     
     <div id="body">
-        <h1 id="title">Rock Paper Scissors</h1>
-        <div id="scores">
-            <span class="left">You <span id="youScore">0</span></span>
-            :
-            <span class="right"><span id="computerScore">0</span> Computer</span>
-        </div>
+        <header>
+            <h1 id="title">Rock Paper Scissors</h1>
+            <div id="scores">
+                <span class="left">You <span id="youScore">0</span></span>
+                :
+                <span class="right"><span id="computerScore">0</span> Computer</span>
+            </div>
 
-        <h2 id="pickSelection">Pick Your Selection</h2>
-
+            <h2 id="pickSelection">Pick your selection</h2>
+            <button id="restart" class="restart-btn hide">Restart Game</button> 
+        </header>       
         <div id="hands">
             <div class="hand" id="rock">
                 <img src="images/rock.png" alt="Rock" />
@@ -29,6 +31,9 @@
                 <img src="images/scissors.png" alt="Scissors" />
             </div>
         </div>
+        <footer>
+            <a href="../" class="althome">home page</a>
+        </footer>
     </div>
 
     <div id="dialog" class="hide">
@@ -39,7 +44,6 @@
             <h1 id="winLose"></h1>
         </div>
     </div>
-    <a href="../" class="althome">home page</a>
     <script src="script.js"></script>
   </body>
 </html>
