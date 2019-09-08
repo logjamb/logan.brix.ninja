@@ -98,14 +98,17 @@ footer {
 }
 
 .restart-btn {
-    background: var(--light-color);
-    color: #333;
+    background: inherit;
+    color: seagreen;
     padding: 0.4rem 1.3rem;
     font-size: 1rem;
     cursor: pointer;
     outline: none;
     border: none;
     margin-bottom: 1rem;
+}
+.restart-btn:hover {
+    color: slateblue;
 }
 
 .restart-btn.hide {

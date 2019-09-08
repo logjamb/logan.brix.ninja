@@ -12,7 +12,7 @@ const stars = Array.from(document.querySelectorAll(".star"));
 stars.forEach((star, i) => {
 	star.addEventListener("change", () => {
 		stars.forEach((s, j) => {
-			s.checked = j <= i;
+			s.querySelector("input").checked = j <= i;
 		});
 	});
 });

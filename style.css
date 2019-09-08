@@ -98,9 +98,27 @@ body {
 #back {
   transform: rotateY(180deg);
 }
-.star{
+
+.star {
   cursor: pointer;
 }
+
+.star polygon {
+  fill: white;
+  /* start */
+
+}
+
+.star input:checked + svg polygon {
+  fill: gold;
+  /* start checked */
+}
+
+.star input {
+  display: none;
+}
+
+
 
 @keyframes flip {
   20% {
