@@ -1,4 +1,4 @@
-const stars = Array.from(document.querySelectorAll(".star"));
+const stars = Array.from(document.querySelectorAll(".star input"));
 const review = document.querySelector("#review");
 const submitButton = document.querySelector("#submit");
 const reviews = document.querySelector("#reviews");
@@ -6,22 +6,22 @@ const reviews = document.querySelector("#reviews");
 const boxUrl = "https://jsonbox.io/loganbrixninja_reviews1";
 
 submitButton.addEventListener("click", async () => {
-	const numStars = stars.reduce(((num, s) => num + (s.querySelector("input").checked ? 1 : 0)), 0);
+	const numStars = stars.reduce(((num, s) => num + (s.checked ? 1 : 0)), 0);
 	disableReview(true);
 	await saveReview(review.value, numStars);
 	await showReviews();
 	alert("Thanks for the review.");
 	review.value = "";
 	stars.forEach((s) => {
-		s.querySelector("input").checked = false;
+		s.checked = false;
 	});
 	disableReview(false);
 });
 
 stars.forEach((star, i) => {
-	star.querySelector("input").addEventListener("change", () => {
+	star.addEventListener("change", () => {
 		stars.forEach((s, j) => {
-			s.querySelector("input").checked = j <= i;
+			s.checked = j <= i;
 		});
 	});
 });
@@ -38,7 +38,7 @@ showReviews();
 function disableReview(disabled = true) {
 	review.disabled = !!disabled;
 	stars.forEach((s) => {
-		s.querySelector("input").disabled = !!disabled;
+		s.disabled = !!disabled;
 	});
 	submitButton.disabled = !!disabled;
 }
