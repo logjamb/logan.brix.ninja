@@ -3,7 +3,7 @@ const review = document.querySelector("#review");
 const submitButton = document.querySelector("#submit");
 const reviews = document.querySelector("#reviews");
 
-const boxUrl = "https://jsonbox.io/loganbrixninja_adpLmqFJomVkinUgAqiSs";
+const boxUrl = "https://jsonbox.io/loganbrixninja_reviews1";
 
 submitButton.addEventListener("click", async () => {
 	const numStars = stars.reduce(((num, s) => num + (s.querySelector("input").checked ? 1 : 0)), 0);
